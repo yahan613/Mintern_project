@@ -72,7 +72,6 @@ section{
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: blue;
 }
 
 .active{
@@ -307,7 +306,7 @@ section{
 }
 
 .about-container .right-about li{
-    font-size: 36px;
+    font-size: 30px;
     flex-direction: column-reverse;
     justify-content: space-between;
 }
@@ -411,10 +410,30 @@ section{
     
 }*/
 
+.contact-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.contact-content-con .right-contact .input-control {
+    margin: 1rem 0;
+  }
 
+.contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
+    border-radius: 10px;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.8rem 1.1rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-grey-5);
+    width: 100%;
+    color: var(--color-white);
+  }
 
-
-
-
-
+  .contact-content-con .right-contact .submit-btn {
+    display: flex;
+    justify-content: flex-start;
+  }
