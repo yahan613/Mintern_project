@@ -437,3 +437,24 @@ section{
     display: flex;
     justify-content: flex-start;
   }
+
+  .testimonials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .box{
+    width: 245px;
+    border: #64CCC5;
+    border-style: solid;
+    border-width: 2px;
+    margin: 10px;
+    padding: 5px 15px;
+  }
+
+  .review{
+    font-size: 14px;
+    line-height: 120%;
+    margin: 10px;
+  }
