@@ -2,6 +2,8 @@ const sections = document.querySelectorAll('.section');
 const sectBtns = document.querySelectorAll('.controls');
 const sectBtn = document.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
+const carousel = document.querySelector(".blog_carousel");
+
 
 
 function PageTransitions(){
@@ -54,3 +56,5 @@ PageTransitions();
         document.body.classList.toggle("light-mode");
     })
 })();
+
+
