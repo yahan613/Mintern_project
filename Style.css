@@ -325,14 +325,11 @@ section{
     margin: 5px;
 }
 
-<<<<<<< HEAD
 .book h2{
     text-transform: uppercase;
 }
 
 
-=======
->>>>>>> 07d8905788a401d1b52290ad57e2923220b6354a
 .book h4{
     text-align: start;
     width: 100%;
@@ -392,25 +389,16 @@ section{
     background-color: var(--color-tertiary);
 }
 
-<<<<<<< HEAD
 /*blog*/
 
 .blog_carousel .icon-container{
     display: flex;
     align-items: center;
     font-size: 40px;
-=======
-/*.image .container h3{
-    font-size: 1.1em;
-    text-align: start;
-    padding: 10px 20px;
-    margin-top: 10px; 
->>>>>>> 07d8905788a401d1b52290ad57e2923220b6354a
 }
 
 .blog{
-    border: solid greenyellow 1px;
-    width: 1500px;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     white-space: nowwrap;
     box-sizing: border-box;
@@ -427,46 +415,74 @@ section{
     height: 500px;
     overflow: hidden;*/
     display: flex;
-    overflow: hidden;
+    justify-content: center;
     width: 100%;
-    height: 380px;
+    height: 450px;
 }
 
-.blog_carousel .blog_box{
-    width: 300px;
-    height: 380px;
-    flex: 0 0 30; /* 每个卡片宽度为 1/3 */
+.carousel{
+    width: 90%;
+    height: 100%;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel .blog_box{
+    width: 18vw;
+    height: 100%;
     margin-left: 10px;
     margin-right: 10px;
-    border: solid greenyellow 1px;
     transition: transform 0.5s;
+    scroll-behavior: smooth;
+    cursor: pointer;
+}
+
+.carousel.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .blog_box{
+    pointer-events: none;
+}
+
+.active {
+    transform: translateX(0);
 }
 
 .blog_box img{
-    width: 100%;
+    width: 17vw;
+    height: 40%;
     margin-bottom: 0;
 }
 
 .blog_box .blog_line{
     margin-top: -7px;
     width: 100%;
-    height: 5px;
+    height: 2%;
     background-color: var(--color-tertiary);
 }
 
 .blog_text{
     width: 100%;
-    height: 230px;
+    height: 58%;
     background-color: #333333;
+    display: flex;
+    justify-content: center;
 }
 
 .blog_text p{
+    white-space: normal;
     width: 80%;
     margin: 0px 20px;
     padding-top: 40px;
     display: flex;
     text-align: start;
 }
+
 
 
 .contact-item{

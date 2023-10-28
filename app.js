@@ -2,7 +2,40 @@ const sections = document.querySelectorAll('.section');
 const sectBtns = document.querySelectorAll('.controls');
 const sectBtn = document.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
-const carousel = document.querySelector(".blog_carousel");
+const carousel = document.querySelector('.carousel');
+firstImg = carousel.querySelectorAll(".blog_box")[0];
+arrowIcons = document.querySelectorAll('.icon-container i');
+
+let isDragStart = false, prevPageX, prevScrolleft;
+let firstImgWidth = firstImg.clientWidth + 600;
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+    })
+})
+
+const dragStart = (e) => {
+    isDragStart = true;
+    prevPageX = e.pageX;
+    prevScrolleft = carousel.scrollLeft;
+}
+const dragging = (e) => {
+    if(!isDragStart) return;
+    e.preventDefault();
+    carousel.classList.add("draggling");
+    let positionDiff = e.pageX -prevPageX
+    carousel.scrollLeft = prevScrolleft - positionDiff;
+}
+
+const dragStop = () => {
+    isDragStart = false;
+    carousel.classList.remove("draggling");
+}
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("mouseup", dragStop);
 
 
 
@@ -52,9 +85,4 @@ PageTransitions();
             document.getElementById(button.dataset.id).classList.add("active");
         })
     });
-    document.querySelector(".theme-btn").addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-    })
 })();
-
-
