@@ -508,14 +508,17 @@ section{
   }
 
 .contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
-    border-radius: 10px;
+    
     font-weight: inherit;
     font-size: inherit;
     font-family: inherit;
     padding: 0.8rem 1.1rem;
     outline: none;
-    border: none;
-    background-color: var(--color-grey-5);
+    border: transparent;
+    border-bottom: #64CCC5;
+    border-style: solid;
+    border-width: 1px;
+    background-color: transparent;
     width: 100%;
     color: var(--color-white);
   }
@@ -530,6 +533,12 @@ section{
   }
 
   .testimonials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hidden-testimonials{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -569,3 +578,16 @@ section{
     cursor: pointer;
     background-color: var(--color-tertiary);
 }
+
+.hidden-testimonials {
+    display: none;
+}
+
+.view-more h3 {
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid var(--color-tertiary);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
