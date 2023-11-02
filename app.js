@@ -79,8 +79,6 @@ function PageTransitions(){
             sectBtns.forEach((btn) => {
                 btn.classList.remove('active')
             })
-            e.target.classList.add('active')
-
             //hide other sections
             sections.forEach((section) => {
                 section.classList.remove('active')
@@ -91,7 +89,7 @@ function PageTransitions(){
     })
 }
 
-// 執行 `PageTransitions`
+// PageTransitions
 
 PageTransitions();
 
