@@ -474,7 +474,11 @@ section{
 }
 
 .blog_box img{
+<<<<<<< HEAD
     width: 17rem;
+=======
+    width: 16.25rem;
+>>>>>>> 7c7f78d62164bcca8e6561bced63a6c49f36f9d8
     height: 40%;
     margin-bottom: 0;
 }
@@ -544,6 +548,7 @@ section{
     justify-content: space-between;
   }
 
+<<<<<<< HEAD
   .hidden-testimonials{
     overflow: hidden;
     flex-direction: row;
@@ -551,6 +556,8 @@ section{
     justify-content: space-between;
   }
 
+=======
+>>>>>>> 7c7f78d62164bcca8e6561bced63a6c49f36f9d8
   .box{
     width: 250px;
     border: #64CCC5;
