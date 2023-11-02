@@ -39,16 +39,17 @@ carousel.addEventListener("mouseup", dragStop);
 
 //Page 3 - clients testimonial
 const viewMoreButton = document.getElementById('view-more');
-    const hiddenTestimonials = document.querySelector('.hidden-testimonials');
+const hiddenTestimonials = document.querySelector('.hidden-testimonials');
 
-    let isHidden = true;
-
+let isHidden = true;
+hiddenTestimonials.style.display = 'none';
     viewMoreButton.addEventListener('click', () => {
         if (isHidden) {
             hiddenTestimonials.style.display = 'flex';
             viewMoreButton.classList.add('active');
             viewMoreButton.querySelector('h3').textContent = 'View Less';
-        } else {
+        } 
+        else {
             hiddenTestimonials.style.display = 'none';
             viewMoreButton.classList.remove('active');
             viewMoreButton.querySelector('h3').textContent = 'View More';
