@@ -98,7 +98,7 @@ section{
 
 @keyframes scaleAnim {
     0% {
-        transform: translateY(-100%) scale(0);
+        transform: translateY(-100%) scale(1);
     }
     100% {
         transform: translateY(0) scale(1);
@@ -108,7 +108,7 @@ section{
 .active {
     display: block;
     animation: scaleAnim 0.8s ease-in-out;
-    transform: translateY(0) scaleY(1);
+    transform: translateY(1) scaleY(1);
 }
 
 /*controls*/
@@ -128,10 +128,7 @@ section{
     background-color: var(--color-secondary) !important;
     transition: all 0.4s ease-in-out;
     transform: scale(1.2);
-
-    .i {
-        background-color: var(--color-white) !important;
-    }
+    
 }
 
 .controls .control {
@@ -143,13 +140,17 @@ section{
     border-radius: 50%;
     margin: 0.7rem 0;
     border-color: var(--box-shadow-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s ease-in-out; /* 添加过渡效果 */
+    &:hover {
+        background-color: var(--color-secondary);
+    }
 }
 
 .controls .i {
     /* icon */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 1.2rem;
     color: var(--color-grey-2);
     pointer-events: none;
@@ -446,7 +447,7 @@ section{
 }
 
 .carousel .blog_box{
-    width: 17vw  !important;
+    width: 17rem  !important;
     height: 100%;
     margin-left: 10px;
     margin-right: 10px;
@@ -469,7 +470,7 @@ section{
 }
 
 .blog_box img{
-    width: 17vw;
+    width: 16.25rem;
     height: 40%;
     margin-bottom: 0;
 }
@@ -511,17 +512,14 @@ section{
   }
 
 .contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
-    
+    border-radius: 10px;
     font-weight: inherit;
     font-size: inherit;
     font-family: inherit;
     padding: 0.8rem 1.1rem;
     outline: none;
-    border: transparent;
-    border-bottom: #64CCC5;
-    border-style: solid;
-    border-width: 1px;
-    background-color: transparent;
+    border: none;
+    background-color: var(--color-grey-5);
     width: 100%;
     color: var(--color-white);
   }
@@ -536,12 +534,6 @@ section{
   }
 
   .testimonials{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .hidden-testimonials{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -581,16 +573,3 @@ section{
     cursor: pointer;
     background-color: var(--color-tertiary);
 }
-
-.hidden-testimonials {
-    display: none;
-}
-
-.view-more h3 {
-    border-radius: 10px;
-    text-align: center;
-    border: 3px solid var(--color-tertiary);
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
