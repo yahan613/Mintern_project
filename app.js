@@ -104,3 +104,29 @@ PageTransitions();
         })
     });
 })();
+
+// 使用 matchMedia 檢查媒體查詢是否符合
+const mediaQuery = window.matchMedia("(max-width: 600px)");
+
+// 定義處理媒體查詢生效的函數
+const handleMediaQuery = (event) => {
+    const loader = document.querySelector(".rwd-loading");
+
+    // 如果媒體查詢生效
+    if (event.matches) {
+        // 在這裡添加 .rwd-loading--visible 的 class
+        loader.classList.add("rwd-loading--visible");
+    } 
+    setTimeout(() => {
+        loader.classList.remove("rwd-loading--visible");
+    }, 5000);
+};
+
+// 添加媒體查詢的事件監聽器
+mediaQuery.addEventListener("change", handleMediaQuery);
+
+// 初始狀態下檢查媒體查詢
+handleMediaQuery(mediaQuery);
+
+
+
