@@ -1,3 +1,4 @@
+
 const sections = document.querySelectorAll('.section');
 const sectBtns = document.querySelectorAll('.controls');
 const sectBtn = document.querySelectorAll('.control');
@@ -150,7 +151,7 @@ const handleResize = () => {
         /*loader.classList.remove("rwd-loading--visible");*/
         loader.classList.add("rwd-loading--hidden");
         console.log("移除");
-    }, 3000);
+    }, 3500);
     // 更新 previousWidth
     previousWidth = currentWidth;
     loader.classList.remove("rwd-loading--hidden");
@@ -161,3 +162,32 @@ window.addEventListener("resize", handleResize);
 
 // 初始狀態下檢查螢幕寬度
 handleResize();
+
+function changeCountry(country) {
+    document.getElementById('selected-country').innerText = country;
+    const telInput = document.getElementById('telInput');
+    switch (country.trim()) {
+        case 'TW':
+            telInput.value = '+886';
+            console.log("TT");
+            break;
+        case 'USA':
+            telInput.value = '+1';
+            console.log("USAA");
+            break;
+        case 'UK':
+            telInput.value = '+44';
+            console.log("UKK");
+            break;
+        case'OTHER':
+            telInput.value = '';
+            break;
+    }
+}
+
+function changeSubmit() {
+    var submitHeading = document.getElementById('Submit');
+    submitHeading.innerText = 'Submitted';
+    console.log("SU");
+}
+

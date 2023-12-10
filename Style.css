@@ -19,6 +19,7 @@
     --color-grey-4: #454e56;
     --color-grey-5: #2a2e35;
     --color-grey-6: #12181b;
+    --color-grey-6-1:#23272d;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3)
 }
@@ -178,7 +179,6 @@ section{
     transition: all 0.4s ease-in-out;
   }
   .header-content .left-header .image img {
-    
     object-fit: cover;
   }
 
@@ -194,10 +194,31 @@ section{
 }
 .right-header .name {
     font-size: 2.5rem;
+    position:relative;
 }
 .right-header .name span {
     color: var(--color-tertiary);
 }
+
+/*.name .typing-animate{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color: #64CCC5;
+    animation: 4s infinite;
+}*/
+
+/*@keyframes typing-animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left:0%;
+    }
+}*/
 
 /*indenpendent components*/
 .btn-con{
@@ -499,10 +520,13 @@ section{
     text-align: start;
 }
 
+
+/*P3*/
 .contact-item{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /*border: solid greenyellow 1px;*/
 }
 
 .contact-content-con .right-contact .input-control {
@@ -521,6 +545,98 @@ section{
     width: 100%;
     color: var(--color-white);
   }
+.input-control_2{
+    /*border-radius: 10px;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+    border: none;
+    background-color: var(--color-grey-5);
+    width: 100%;
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;*/
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-control_shorter{
+    width: 86%;
+  }
+
+  .contact-content-con .right-contact .input-control_shorter input, .contact-content-con .right-contact .input-control_shorter textarea {
+    width: 100%;
+    border-radius: 10px;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.8rem 1.1rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-grey-5);
+    color: var(--color-white);
+  }
+
+  .country{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .country-btn{
+    /*color: white;
+    background-color: var(--color-grey-5);
+    border-radius: 10px;*/
+    border-radius: 10px;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.8rem 1.1rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-grey-5);
+    width: 100%;
+    color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  .country-btn-content{
+    display:none;
+    position: absolute;
+    border-radius: 10px;
+    width: 100px;
+    padding-top: 47px;
+  }
+
+  .country:hover{
+    display: flex;
+    flex-direction: column;
+  }
+  .country:hover .country-btn-content{
+    display: block; 
+    box-shadow: 0px 8px 16px 0px var(--color-black);
+  }
+
+  .country-btn-content a{
+    display: block;
+    background-color: var(--color-grey-5);
+    padding: 12px 16px;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    transition: background-color 200ms ease-in-out;
+    /*border: solid greenyellow 1px;*/
+  }
+
+  .country-btn-content a:hover {
+    background-color: var(--color-grey-6-1); /* 在此替换为您希望的较深颜色 */
+}
+  
 
   .contact-content-con .right-contact .submit-btn {
     display: flex;
@@ -530,6 +646,7 @@ section{
   .right-contact{
     margin-bottom: 200px;
   }
+
 
   .testimonials{
     display: flex;
@@ -609,6 +726,8 @@ section{
       text-align: center;
       padding-top: 3rem;
     }
+
+
     .header-content .left-header .image {
       grid-row: 1; /*image on top of text*/
       padding-top: 30px;
