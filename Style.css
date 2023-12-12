@@ -50,7 +50,7 @@ a{
 }
 
 .background_2{
-    border: solid greenyellow 1px;
+    /*border: solid greenyellow 1px;*/
     position: fixed;
     z-index: 0;
     background-image: url(img/background.png);
@@ -177,6 +177,17 @@ section{
     width: 68%;
     margin: 10%;
     transition: all 0.4s ease-in-out;
+    opacity: 0; /* 初始透明度为0，即完全透明 */
+    animation: fadeIn 4s forwards; 
+  }
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0; /* 初始透明度为0 */
+    }
+    to {
+        opacity: 1; /* 最终透明度为1，完全不透明 */
+    }
   }
   .header-content .left-header .image img {
     object-fit: cover;
@@ -195,28 +206,50 @@ section{
 .right-header .name {
     font-size: 2.5rem;
     position:relative;
+    overflow: hidden;
 }
+
+.name1{
+    width: 0;
+    overflow: hidden; /* 重要：确保文本在宽度变化时被截断 */
+    white-space: nowrap; /* 保持文本在一行显示 */
+    animation: 3s typing  forwards;
+}
+
+@keyframes typing {
+    from{
+        width: 4%;
+    }
+    to{
+        width: 100%;
+    }
+    
+}
+
+
 .right-header .name span {
     color: var(--color-tertiary);
 }
 
-/*.name .typing-animate{
-    content:"";
-    position: absolute;
-    top:0;
-    left:0;
-    height:100%;
+
+/*.name .typing-animate_2{
     width:100%;
-    background-color: #64CCC5;
-    animation: 4s infinite;
+    height:100%;
+    position: absolute;
+    background-color: transparent;
+    z-index: 23;
+    top:0;
+    animation: disappear-animation 3s linear;
+    border: 10px solid blue;
+    overflow: hidden;
 }*/
 
-/*@keyframes typing-animate{
-    40%, 60%{
-        left: 100%;
+/*@keyframes disappear-animation {
+    0% {
+        left: 0%;
     }
-    100%{
-        left:0%;
+    100% {
+        left: 100%;
     }
 }*/
 
