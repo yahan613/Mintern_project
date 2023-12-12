@@ -310,6 +310,7 @@ section{
 
 .left-about .btn-con{
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .about-container .vertical-line{
@@ -696,8 +697,9 @@ section{
     background-color: var(--color-tertiary);
 }
 
-/*Home page RWD testing (phone)*/
-@media screen and (max-width: 600px) {
+/*RWD testing (Tablet)*/
+@media screen and (max-width: 720px) {
+    /*Home page*/
     header {
       padding: 0 !important;
       overflow-y: scroll;/*added scroll fuction*/
@@ -726,8 +728,6 @@ section{
       text-align: center;
       padding-top: 3rem;
     }
-
-
     .header-content .left-header .image {
       grid-row: 1; /*image on top of text*/
       padding-top: 30px;
@@ -759,8 +759,43 @@ section{
     .about-container .left-about p {
       padding-left: 0;
     }
-  }
-  /*NOTES: consider hiding the scroll bar when screen becomes more narrow*/
+
+
+    /*About me (+ Contact me)*/
+    section{
+        min-height: 100vh;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 10%;
+    }
+    .about-container .vertical-line{
+        width: 100%; 
+        height: 2px;
+        background-color: var(--color-tertiary); 
+        margin: 0 auto; 
+    }
+    .about-container .left-about p{
+        width: 100%;
+    }
+    .about-container .left-about .btn-con{
+        padding-bottom: 40px;
+    }
+    .about-container .right-about{
+        padding-left: 0px;
+    }
+    .about-container .right-about li{
+        padding-left: 20%;
+    }
+
+    /*book images not aligning correctly, needed to be fixed??*/
+    /*.image-container .image .container p{
+        margin-top: auto;
+    }*/
+
+}
+
 
   /*RWD-loading*/
 
