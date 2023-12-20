@@ -13,7 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <script type="module" src="Firestoreinit.js"></script>
 </head>
 
 <body class="main-content">
@@ -34,21 +34,21 @@
                 <h1 class="name">
                     <div class="name1">Hi, I'm <span>Benjamin Graham.</span></div>
                     <div class="name1">An
-                    economist, professor,</div> 
+                        economist, professor,</div>
                     <div class="name1">and investor.</div>
                     <div class="typing-animate_2"></div>
                 </h1>
                 <p>
-                    <div class="name1">Benjamin Graham taught hundreds of thousands of people how to </div>
-                    <div class="name1">invest
+                <div class="name1">Benjamin Graham taught hundreds of thousands of people how to </div>
+                <div class="name1">invest
                     in the stock market. He’s also my grandfather and he showed</div>
-                    <div class="name1"> me how to invest in happiness. Beyond Ben Graham takes you beyond</div>
-                    <div class="name1"> the “father of value investing” you already know.</div>
+                <div class="name1"> me how to invest in happiness. Beyond Ben Graham takes you beyond</div>
+                <div class="name1"> the “father of value investing” you already know.</div>
                 </p>
                 <br>
                 <div class="btn-con">
                     <a href="" class="main-btn">
-                        <div class="btn-text">Download content</div>
+                        <div class="btn-text">Download CV</div>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
                 </div>
@@ -59,23 +59,27 @@
     <main>
         <section class="ection sec2 about" id="about">
             <div class="main-title">
-                <h2>about <span>me</span></h2>
+                <h2>about <span>me，</span></h2>
+                <h2>Benjamin Graham.</h2>
             </div>
             <div class="about-container">
                 <div class="left-about">
                     <h2>information about me</h2>
                     <br>
                     <p>
-                        Benjamin Graham (1894-1976) was a renowned American economist, investor, and professor. He is
-                        widely regarded as one of the most influential figures in the world of finance and investing.
+                        Benjamin Graham (1894-1976) was a renowned American economist, investor, and professor. He
+                        is
+                        widely regarded as one of the most influential figures in the world of finance and
+                        investing.
                         Graham is often referred to as the "father of value investing".
-                        Graham's ideas and principles had a profound impact on the investment community and continue to
+                        Graham's ideas and principles had a profound impact on the investment community and continue
+                        to
                         influence investors, including legendary figures like Warren Buffett, who was one of his
                         students.
                     </p>
                     <div class="btn-con">
                         <a href="" class="main-btn">
-                            <div class="btn-text">Download content</div>
+                            <div class="btn-text">Download CV</div>
                             <span class="btn-icon"><i class="fas fa-download"></i></span>
                         </a>
                     </div>
@@ -102,7 +106,8 @@
                             <div class="book_name">
                                 <h3>Security Analysis</h3>
                             </div>
-                            <p> It was first published in 1934. The book is considered a classic and is often referred
+                            <p> It was first published in 1934. The book is considered a classic and is often
+                                referred
                                 to as
                                 the bible of value investing. </p>
                             <div class="learn_more">
@@ -117,7 +122,8 @@
                             <div class="book_name">
                                 <h3>Intelligent Investor</h3>
                             </div>
-                            <p> It offers timeless wisdom and practical advice for investors, emphasizing disciplined
+                            <p> It offers timeless wisdom and practical advice for investors, emphasizing
+                                disciplined
                                 and patient approach to investing. </p>
                             <div class="learn_more">
                                 <h3>Purchase Link</h3>
@@ -277,10 +283,10 @@
                         <div class="right-contact">
                             <form action="" class="contact-form">
                                 <div class="input-control">
-                                    <input type="text" required placeholder="NAME">
+                                    <input type="text" id="nameInput" required placeholder="NAME">
                                 </div>
                                 <div class="input-control">
-                                    <input type="email" required placeholder="EMAIL">
+                                    <input type="email" id="emailInput" required placeholder="EMAIL">
                                 </div>
                                 <div class="input-control_2">
                                     <div class="country">
@@ -290,9 +296,11 @@
                                             <p id="selected-country">Country</p>
                                         </div>
                                         <div class="country-btn-content">
-                                            <a onclick="changeCountry('TW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')">TW</a>
+                                            <a
+                                                onclick="changeCountry('TW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')">TW</a>
                                             <a onclick="changeCountry('USA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')">USA</a>
-                                            <a onclick="changeCountry('UK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')">UK</a>
+                                            <a
+                                                onclick="changeCountry('UK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')">UK</a>
                                             <a onclick="changeCountry('OTHER')">OTHER</a>
                                         </div>
                                     </div>
@@ -301,14 +309,19 @@
                                     </div>
                                 </div>
                                 <div class="input-control">
-                                    <input type="text" required placeholder="ENTER SUBJECT">
+                                    <input type="text" id="subjectInput" required placeholder="ENTER SUBJECT">
                                 </div>
                                 <div class="input-control">
-                                    <textarea cols="15" rows="5" placeholder="ENTER MESSAGE..."></textarea>
+                                    <textarea cols="15" rows="5" id="mesInput"
+                                        placeholder="ENTER MESSAGE..."></textarea>
                                 </div>
                                 <br>
-                                <div class="learn_more" id = "Submitbtn" onclick="changeSubmit()">
+                                <div class="learn_more" id="Submitbtn" onclick="changeSubmit()">
                                     <h3 id="Submit">Submit</h3>
+                                </div>
+                                <div class="email-check">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>Thank you! <br>You will soon get a mail to make sure your message was sent.</h3>
                                 </div>
                             </form>
                         </div>
@@ -325,7 +338,7 @@
                                 </div>
                                 <p class="review">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore.
+                                    incididunt ut labore et dolore magna aliqua.
                                 </p>
                                 <i class="fas fa-user-circle"></i>
                                 John Doe
@@ -340,7 +353,7 @@
                                 </div>
                                 <p class="review">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore.
+                                    incididunt ut labore et dolore magna aliqua.
                                 </p>
                                 <i class="fas fa-user-circle"></i>
                                 Jane Doe
@@ -355,7 +368,7 @@
                                 </div>
                                 <p class="review">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore.
+                                    incididunt ut labore et dolore magna aliqua.
                                 </p>
                                 <i class="fas fa-user-circle"></i>
                                 Woorren Boofett
@@ -372,7 +385,7 @@
                                 </div>
                                 <p class="review">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore.
+                                    incididunt ut labore et dolore magna aliqua.
                                 </p>
                                 <i class="fas fa-user-circle"></i>
                                 Amy Wang
@@ -387,7 +400,7 @@
                                 </div>
                                 <p class="review">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore.
+                                    incididunt ut labore et dolore magna aliqua.
                                 </p>
                                 <i class="fas fa-user-circle"></i>
                                 Jack Chen
@@ -402,7 +415,7 @@
                                 </div>
                                 <p class="review">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore.
+                                    incididunt ut labore et dolore magna aliqua.
                                 </p>
                                 <i class="fas fa-user-circle"></i>
                                 Peter Li
@@ -430,6 +443,8 @@
         </div>
     </div>
     <script src="app.js"></script>
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+
 </body>
 
 </html>
