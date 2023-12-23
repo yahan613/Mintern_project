@@ -26,10 +26,10 @@ const dragStart = (e) => {
     prevScrolleft = carousel.scrollLeft;
 }
 const dragging = (e) => {
-    if(!isDragStart) return;
+    if (!isDragStart) return;
     e.preventDefault();
     carousel.classList.add("draggling");
-    let positionDiff = e.pageX -prevPageX
+    let positionDiff = e.pageX - prevPageX
     carousel.scrollLeft = prevScrolleft - positionDiff;
 }
 
@@ -48,28 +48,28 @@ const hiddenTestimonials = document.querySelector('.hidden-testimonials');
 
 let isHidden = true;
 hiddenTestimonials.style.display = 'none';
-    viewMoreButton.addEventListener('click', () => {
-        if (isHidden) {
-            hiddenTestimonials.style.display = 'flex';
-            viewMoreButton.classList.add('active');
-            viewMoreButton.querySelector('h3').textContent = 'View Less';
-        } 
-        else {
-            hiddenTestimonials.style.display = 'none';
-            viewMoreButton.classList.remove('active');
-            viewMoreButton.querySelector('h3').textContent = 'View More';
-        }
+viewMoreButton.addEventListener('click', () => {
+    if (isHidden) {
+        hiddenTestimonials.style.display = 'flex';
+        viewMoreButton.classList.add('active');
+        viewMoreButton.querySelector('h3').textContent = 'View Less';
+    }
+    else {
+        hiddenTestimonials.style.display = 'none';
+        viewMoreButton.classList.remove('active');
+        viewMoreButton.querySelector('h3').textContent = 'View More';
+    }
 
-        isHidden = !isHidden;
-    });
-    
+    isHidden = !isHidden;
+});
 
-function PageTransitions(){
-    document.addEventListener('DOMContentLoaded', function() {
+
+function PageTransitions() {
+    document.addEventListener('DOMContentLoaded', function () {
         const sectBtn = document.querySelectorAll('.control');
-    
+
         for (let i = 0; i < sectBtn.length; i++) {
-            sectBtn[i].addEventListener('click', function() {
+            sectBtn[i].addEventListener('click', function () {
                 let currentBtn = document.querySelector(".active-btn");
                 currentBtn.className = currentBtn.className.replace('active-btn', '');
                 this.className += ' active-btn';
@@ -80,7 +80,7 @@ function PageTransitions(){
     //Section Active
     allSections.addEventListener('click', (e) => {
         const id = e.target.dataset.id;
-        if(id){
+        if (id) {
             //remove selected from the other btns
             sectBtns.forEach((btn) => {
                 btn.classList.remove('active')
@@ -101,7 +101,7 @@ PageTransitions();
 
 (function () {
     [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
             document.querySelector(".active-btn").classList.remove("active-btn");
             this.classList.add("active-btn");
             document.querySelector(".active").classList.remove("active");
@@ -183,15 +183,56 @@ function changeCountry(country) {
             telInput.value = '+44';
             console.log("UKK");
             break;
-        case'OTHER':
+        case 'OTHER':
             telInput.value = '';
             break;
     }
 }
 
-function changeSubmit() {
+/*function readInputValues() {
+    // 通过ID获取输入字段的值
+    const name = document.getElementById('nameInput').value;
+    const email = document.getElementById('emailInput').value;
+    const tel = document.getElementById('telInput').value;
+    const subject = document.getElementById('subjectInput').value;
+    const message = document.getElementById('mesInput').value;
+
+    // 打印输入字段的值到控制台
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Tel:", tel);
+    console.log("Subject:", subject);
+    console.log("Message:", message);
+
+    // 如果需要，您可以将这些值用于其他用途，例如将它们添加到 Cloud Firestore 中
+}*/
+
+let ContactData = {
+    getName: '',
+    getEmail: '',
+    getTel: '',
+    getSubject: '',
+    getMessage: ''
+};
+
+/*function changeSubmit() {
     var submitHeading = document.getElementById('Submit');
     submitHeading.innerText = 'Submitted';
+    ContactData.getName = document.getElementById('nameInput').value;
+    ContactData.getEmail = document.getElementById('emailInput').value;
+    ContactData.getTel = document.getElementById('telInput').value;
+    ContactData.getSubject = document.getElementById('subjectInput').value;
+    ContactData.getMessage = document.getElementById('mesInput').value;
+    console.log("前內容：", ContactData);
+    setTimeout(function () {
+        document.getElementById('nameInput').value = '123';
+        document.getElementById('emailInput').value = '455';
+        document.getElementById('telInput').value = '789';
+        document.getElementById('subjectInput').value = '';
+        document.getElementById('mesInput').value = '';
     console.log("SU");
-}
+    }, 1000); // 延迟时间为0.5秒（500毫秒）
+}*/
+
+
 

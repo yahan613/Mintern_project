@@ -718,12 +718,22 @@ section {
     align-items: center;
     position: fixed;
     top: 10px;
-    right: 10px;
+    right: 0;/*-680px;*/
     background-color: var(--color-secondary);
     width: 40%;
     height: 150px;
     border-radius: 7px;
+    /*animation: slideRight 0.5s ease-in-out;*/
 }
+
+/*@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-680px);
+    }
+}*/
 
 .email-check h3 {
     border: none;
