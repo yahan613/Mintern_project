@@ -1,4 +1,16 @@
 console.log("hello");
+// 获取当前时间的时间戳（以毫秒为单位）
+const currentTimeStamp = Date.now();
+
+// 获取当前时间的Date对象
+const currentDate = new Date();
+
+// 获取当前时间的字符串表示，使用toLocaleString()以获取本地时间格式
+const currentDateString = currentDate.toLocaleString();
+
+
+console.log("Date Object:", currentDate);
+//console.log("Formatted Date String:", currentDateString);
 
 // firebase-config.js
 // Import the functions you need from the SDKs you need
@@ -89,8 +101,21 @@ async function initializeFirestore() {
         });
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {
-        console.error("Error adding document: ", e);
+        console.error("Error adding client's commit document: ", e);
     }
+    try {
+        const docmail = await addDoc(collection(db, "mail"), {
+            to: ContactData.getEmail,
+            message: {
+                subject: "Contact Message Notify",
+                text: ("Here is " + ContactData.getName + " Contact at "+ currentDate +".\nTel: "+ ContactData.getTel + "\nSubject: "+ ContactData.getSubject + "\nMessage: "+ ContactData.getMessage + "\nPlease reply the message.")
+            }
+        });
+        console.log("Document written with ID: ", docmail.id);
+    } catch (e) {
+        console.error("Error adding client's commit document: ", e);
+    }
+
     setTimeout(function () {
         document.getElementById('nameInput').value = '';
         document.getElementById('emailInput').value = '';
@@ -99,8 +124,70 @@ async function initializeFirestore() {
         document.getElementById('mesInput').value = '';
         console.log("SU");
     }, 1000); // 延迟时间为0.5秒（500毫秒）
+    var emailCheckElement = document.getElementById('emailCheckElement');
+    emailCheckElement.classList.add('slide-animation');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     window.changeSubmit = initializeFirestore;
 });
+
+//點閱率
+
+function blogview1() {
+    // 在這裡添加你希望觸發的 JavaScript 代碼
+    
+    console.log('Blog1 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
+    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.blogview1 = blogview1;
+});
+
+function blogview2() {
+    // 在這裡添加你希望觸發的 JavaScript 代碼
+    
+    console.log('Blog2 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
+    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.blogview2 = blogview2;
+});
+
+function blogview3() {
+    // 在這裡添加你希望觸發的 JavaScript 代碼
+    
+    console.log('Blog3 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
+    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.blogview3 = blogview3;
+});
+
+function blogview4() {
+    // 在這裡添加你希望觸發的 JavaScript 代碼
+    
+    console.log('Blog4 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
+    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.blogview4 = blogview4;
+});
+
+function blogview5() {
+    // 在這裡添加你希望觸發的 JavaScript 代碼
+    
+    console.log('Blog5 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
+    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.blogview5 = blogview5;
+});
+
+
+
