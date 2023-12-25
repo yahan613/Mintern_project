@@ -944,6 +944,15 @@ section {
         padding: 5px 8px;
     }
 
+    /*.email-check{
+        left: 10px;
+        width: 60%;
+        padding: 10px;
+    }
+    .email-check i{
+        font-size: 30px;
+        width: 60%;
+    }*/
     .email-check{
         left: 10px;
         width: 60%;
@@ -953,6 +962,7 @@ section {
         font-size: 30px;
         width: 60%;
     }
+    
 
 }
 
