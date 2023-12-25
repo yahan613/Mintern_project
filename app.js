@@ -8,7 +8,11 @@ firstImg = carousel.querySelectorAll(".blog_box")[0];
 arrowIcons = document.querySelectorAll('.icon-container i');
 
 let isDragStart = false, prevPageX, prevScrolleft;
-let firstImgWidth = firstImg.clientWidth + 600;
+var offset = 600;
+if (window.innerWidth <= 768) {
+    offset = 300;
+}
+let firstImgWidth = firstImg.clientWidth + offset;
 
 arrowIcons.forEach(icon => {
     icon.addEventListener("click", () => {

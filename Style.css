@@ -36,7 +36,7 @@ a {
     display: inline-block;
     text-decoration: none;
     color: inherit;
-    font-family: inhirit;
+    font-family: inherit;
 }
 
 .background {
@@ -179,7 +179,8 @@ section {
     border-radius: var(--br-sm-2);
     height: 80%;
     width: 68%;
-    margin: 10%;
+    margin: 20%;
+    /*margin-bottom: 50%;*/
     transition: all 0.4s ease-in-out;
     opacity: 0;
     /* 初始透明度为0，即完全透明 */
@@ -206,8 +207,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 14rem;
-    /*problematic when using rwd*/
+    padding-right: 40%;
 }
 
 .header-content .right-header p {
@@ -218,12 +218,12 @@ section {
 .right-header .name {
     font-size: 2.5rem;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .name1 {
     width: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     /* 重要：确保文本在宽度变化时被截断 */
     white-space: nowrap;
     /* 保持文本在一行显示 */
@@ -335,6 +335,12 @@ section {
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 700;
+}
+.main-title h5{
+    color: #454e56;
+    opacity: 60%;
+    text-align: center;
+    letter-spacing: 2px; 
 }
 
 .main-title span {
@@ -474,8 +480,6 @@ section {
     transition: background-color 0.3s;
 }
 
-
-
 .learn_more :hover {
     cursor: pointer;
     background-color: var(--color-tertiary);
@@ -492,7 +496,7 @@ section {
 .blog {
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    white-space: nowwrap;
+    white-space: nowrap;
     box-sizing: border-box;
     margin-top: 100px;
 }
@@ -746,7 +750,6 @@ section {
     margin-bottom: 200px;
 }
 
-
 .testimonials {
     display: flex;
     flex-direction: row;
@@ -754,7 +757,6 @@ section {
 }
 
 .hidden-testimonials {
-    overflow: hidden;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
@@ -767,7 +769,6 @@ section {
     border-width: 3px;
     margin: 10px;
     padding: 5px 15px;
-
     .stars {
         color: #64CCC5;
     }
@@ -797,28 +798,52 @@ section {
 }
 
 /*RWD testing (Tablet)*/
-@media screen and (max-width: 720px) {
-
+@media screen and (max-width: 768px) {
     /*Home page*/
     header {
-        padding: 0 !important;
+        /*padding: 0 !important;*/
         overflow-y: scroll;
         /*added scroll fuction*/
     }
-
+    section{
+        padding: 10%;
+        margin-top: 30px;
+    }
     header::-webkit-scrollbar {
         /*hide scroll bar*/
         display: none;
     }
-
+    .name_des{
+        margin: auto 10%;
+    }
     .theme-btn {
         width: 50px;
         height: 50px;
     }
-
+    .btn-con{
+        margin: auto 10%;
+    }
     .header-content {
         grid-template-columns: repeat(1, 1fr);
         padding-bottom: 6rem;
+    }
+
+    .background_2{
+        opacity: 0;
+    }
+    .section{
+        background-color: transparent;
+    }
+
+    .background_3{
+        position: fixed;
+        bottom: 0;
+        z-index: 0;
+        background-image: url(img/background.png);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;     
     }
 
     .left-header .h-shape {
@@ -834,14 +859,23 @@ section {
     .right-header .name {
         font-size: 2.5rem !important;
         text-align: center;
-        padding-top: 3rem;
+        margin-top: 6rem;
     }
 
     .header-content .left-header .image {
         grid-row: 1;
         /*image on top of text*/
         padding-top: 30px;
+        width: 90%; 
+        margin: 0%;
+    }
+    .header-content .left-header .image img{
         width: 90%;
+        margin: 5% 10%;
+    } 
+    .header-content .right-header .name1{
+        white-space: wrap;
+        /*text-align: center;*/
     }
 
     .controls {
@@ -876,17 +910,6 @@ section {
         padding-left: 0;
     }
 
-
-    /*About me (+ Contact me)*/
-    section {
-        min-height: 100vh;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        padding: 10%;
-    }
-
     .about-container .vertical-line {
         width: 100%;
         height: 2px;
@@ -915,6 +938,12 @@ section {
         margin-top: auto;
     }*/
 
+    /*Contact me*/
+    .box{
+        margin: 6px;
+        padding: 5px 8px;
+    }
+
     .email-check{
         left: 10px;
         width: 60%;
@@ -927,6 +956,53 @@ section {
 
 }
 
+/*RWD testing (mobile)*/
+@media screen and (max-width: 414px){
+    /*home page*/
+    .background_2{
+        opacity: 0;
+    }
+
+    /*about me*/
+    section{
+        padding: 10%;
+        margin-top: 30px;
+    }
+    .about-container .right-about li{
+        padding-left: 0;
+    }
+    /* Books display need to be fixed!
+    .image-container .image {
+        display: block;
+        width: 60%;
+    }*/
+    
+    /*contact me*/  
+    .testimonials{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    } 
+    .hidden-testimonials{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .review{
+        font-size: 12px;
+        line-height: 110%;
+        margin: 10px;
+    }
+    .box{
+        margin-top: 10px;
+        margin: 6px;
+        padding: 5px 8px;
+    }
+    .stars{
+        display: flex;
+        width: 12%;
+    }
+}
 
 /*RWD-loading*/
 
