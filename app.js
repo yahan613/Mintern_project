@@ -7,6 +7,7 @@ const carousel = document.querySelector('.carousel');
 firstImg = carousel.querySelectorAll(".blog_box")[0];
 arrowIcons = document.querySelectorAll('.icon-container i');
 
+
 let isDragStart = false, prevPageX, prevScrolleft;
 var offset = 600;
 if (window.innerWidth <= 768) {
@@ -189,23 +190,6 @@ function changeCountry(country) {
     }
 }
 
-/*function readInputValues() {
-    // 通过ID获取输入字段的值
-    const name = document.getElementById('nameInput').value;
-    const email = document.getElementById('emailInput').value;
-    const tel = document.getElementById('telInput').value;
-    const subject = document.getElementById('subjectInput').value;
-    const message = document.getElementById('mesInput').value;
-
-    // 打印输入字段的值到控制台
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Tel:", tel);
-    console.log("Subject:", subject);
-    console.log("Message:", message);
-
-    // 如果需要，您可以将这些值用于其他用途，例如将它们添加到 Cloud Firestore 中
-}*/
 
 let ContactData = {
     getName: '',
@@ -233,6 +217,20 @@ let ContactData = {
     console.log("SU");
     }, 1000); // 延迟时间为0.5秒（500毫秒）
 }*/
+
+
+//name1
+const n1 = document.querySelector('.name1');
+window.addEventListener('scroll', n1animation);
+function n1animation(){
+    var rect = n1.getBoundingClientRect();
+    // 如果元素的頂部在視窗的底部之上，且元素的底部在視窗的頂部之下
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        console.log("n1 is in the viewport");
+        window.removeEventListener('scroll', n1animation); // 移除滾動事件監聽器，避免多次觸發
+    }
+    console.log("n1");
+}
 
 
 

@@ -22,6 +22,7 @@
     --color-grey-6-1: #23272d;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3)
+
 }
 
 body {
@@ -182,10 +183,14 @@ section {
     margin: 20%;
     /*margin-bottom: 50%;*/
     transition: all 0.4s ease-in-out;
-    opacity: 0;
     /* 初始透明度为0，即完全透明 */
-    animation: fadeIn 4s forwards;
+    /*animation: fadeIn 4s forwards;*/
 }
+.left-header .img{
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+
 
 @keyframes fadeIn {
     from {
@@ -208,6 +213,8 @@ section {
     flex-direction: column;
     justify-content: center;
     padding-right: 40%;
+    /*animation: fadeInUp;
+    animation-duration: 2s;*/
 }
 
 .header-content .right-header p {
@@ -227,7 +234,7 @@ section {
     /* 重要：确保文本在宽度变化时被截断 */
     white-space: nowrap;
     /* 保持文本在一行显示 */
-    animation: 3s typing forwards;
+    /*animation: 3s fadeIn forwards;*/
 }
 
 @keyframes typing {
@@ -282,46 +289,41 @@ section {
     border: 1px solid var(--color-tertiary);
     display: flex;
     align-self: flex-start;
-    display: flex;
     align-items: center;
     overflow: hidden;
-
-    .btn-text {
-        font-family: "Your Font", sans-serif;
-        padding: 0 2rem;
-    }
-
-    .btn-icon {
-        background-color: var(--color-tertiary);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        padding: 1rem;
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateX(100%);
-        transition: all .4s ease-out;
-        z-index: -1;
-    }
-
-    &:hover {
-        &::before {
-            width: 100%;
-            height: 100%;
-            background-color: var(--color-tertiary);
-            transform: translateX(0);
-
-        }
-    }
-
-
 }
+
+.main-btn .btn-text {
+    font-family: "Your Font", sans-serif;
+    padding: 0 2rem;
+}
+
+.main-btn .btn-icon {
+    background-color: var(--color-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.main-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all .4s ease-out;
+    z-index: -1;
+}
+
+.main-btn:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-tertiary);
+    transform: translateX(0);
+}
+
 
 /*about*/
 
@@ -624,8 +626,7 @@ section {
 
 .view5{
     padding-left: 20px;
-    display: flex;
-    justify-content: flex-start;
+    
 }
 
 .view5 i{
@@ -847,6 +848,38 @@ section {
     background-color: var(--color-tertiary);
 }
 
+.loading-icon i {
+    font-size: 15vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+/*footer*/
+footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+}
+
+footer p {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: var(--color-background);
+}
+
 /*RWD testing (Tablet)*/
 @media screen and (max-width: 768px) {
     /*Home page*/
@@ -1012,8 +1045,6 @@ section {
         font-size: 30px;
         width: 60%;
     }
-    
-
 }
 
 /*RWD testing (mobile)*/
@@ -1062,6 +1093,7 @@ section {
         display: flex;
         width: 12%;
     }
+
 }
 
 /*RWD-loading*/
@@ -1130,33 +1162,3 @@ section {
     }
 }
 
-.loading-icon i {
-    font-size: 15vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-}
-
-footer {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    margin-top: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-secondary);
-}
-
-footer p {
-    font-family: Arial;
-    font-size: 16px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
-    color: var(--color-background);
-}
