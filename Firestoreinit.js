@@ -15,7 +15,7 @@ console.log("Date Object:", currentDate);
 // firebase-config.js
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js'
+import { getFirestore, collection, addDoc, onSnapshot, doc} from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js'
 //import { doc, setDoc } from "firebase/firestore"; 
 //import "firebase/firestore";
 //import firebase from "firebase/app";
@@ -132,62 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.changeSubmit = initializeFirestore;
 });
 
-//點閱率
 
-function blogview1() {
-    // 在這裡添加你希望觸發的 JavaScript 代碼
-    
-    console.log('Blog1 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
-    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    window.blogview1 = blogview1;
-});
-
-function blogview2() {
-    // 在這裡添加你希望觸發的 JavaScript 代碼
-    
-    console.log('Blog2 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
-    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    window.blogview2 = blogview2;
-});
-
-function blogview3() {
-    // 在這裡添加你希望觸發的 JavaScript 代碼
-    
-    console.log('Blog3 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
-    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    window.blogview3 = blogview3;
-});
-
-function blogview4() {
-    // 在這裡添加你希望觸發的 JavaScript 代碼
-    
-    console.log('Blog4 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
-    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    window.blogview4 = blogview4;
-});
-
-function blogview5() {
-    // 在這裡添加你希望觸發的 JavaScript 代碼
-    
-    console.log('Blog5 link clicked!'); // 這只是一個示例，你可以替換為你的實際代碼
-    // 例如，你可以在這裡執行一些操作，或導航到另一個頁面
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    window.blogview5 = blogview5;
-});
 
 
 

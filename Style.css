@@ -582,6 +582,56 @@ section {
     text-align: start;
 }
 
+.view1{
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.view1 i{
+    padding-right: 10px;
+}
+
+.view2{
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.view2 i{
+    padding-right: 10px;
+}
+
+.view3{
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.view3 i{
+    padding-right: 10px;
+}
+
+.view4{
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.view4 i{
+    padding-right: 10px;
+}
+
+.view5{
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.view5 i{
+    padding-right: 10px;
+}
+
 
 /*P3*/
 .contact-item {
