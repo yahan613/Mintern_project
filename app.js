@@ -62,8 +62,7 @@ viewMoreButton.addEventListener('click', () => {
     }
 
     isHidden = !isHidden;
-});
-
+}); 
 
 function PageTransitions() {
     document.addEventListener('DOMContentLoaded', function () {

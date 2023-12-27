@@ -131,8 +131,3 @@ async function initializeFirestore() {
 document.addEventListener('DOMContentLoaded', () => {
     window.changeSubmit = initializeFirestore;
 });
-
-
-
-
-
