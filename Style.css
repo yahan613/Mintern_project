@@ -211,30 +211,21 @@ section {
 .header-content .right-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-right: 40%;
+    justify-content: start;
+    padding-right: 30%;
+    padding-top: 20%;
     /*animation: fadeInUp;
     animation-duration: 2s;*/
 }
 
 .header-content .right-header p {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     line-height: 2rem;
 }
 
 .right-header .name {
     font-size: 2.5rem;
     position: relative;
-    /*overflow: hidden;*/
-}
-
-.name1 {
-    width: 0;
-    /*overflow: hidden;*/
-    /* 重要：确保文本在宽度变化时被截断 */
-    white-space: nowrap;
-    /* 保持文本在一行显示 */
-    /*animation: 3s fadeIn forwards;*/
 }
 
 @keyframes typing {
@@ -935,14 +926,18 @@ footer p {
 
     .right-header {
         padding-right: 0rem !important;
-        /*width: 90%;*/
+        width: 90%;
         margin: 0 auto;
+        padding-top: 0; 
     }
 
     .right-header .name {
         font-size: 2.5rem !important;
         text-align: center;
         margin-top: 6rem;
+    }
+    .right-header .name_des{
+        text-align: justify;
     }
 
     .header-content .left-header .image {
@@ -957,7 +952,8 @@ footer p {
         margin: 5% 10%;
     } 
     .header-content .right-header .name1{
-        white-space: wrap;
+        text-align: justify;
+        /*white-space: wrap;*/
         /*text-align: center;*/
     }
 
