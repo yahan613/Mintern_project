@@ -178,8 +178,8 @@ section {
 
 .header-content .left-header .image {
     border-radius: var(--br-sm-2);
-    height: 80%;
-    width: 68%;
+    height: 90%;
+    /*width: 40%;*/
     margin: 20%;
     /*margin-bottom: 50%;*/
     transition: all 0.4s ease-in-out;
@@ -935,7 +935,7 @@ footer p {
 
     .right-header {
         padding-right: 0rem !important;
-        width: 90%;
+        /*width: 90%;*/
         margin: 0 auto;
     }
 
@@ -1062,11 +1062,18 @@ footer p {
     .about-container .right-about li{
         padding-left: 0;
     }
-    /* Books display need to be fixed!
-    .image-container .image {
-        display: block;
-        width: 60%;
-    }*/
+    .image-container .image .book_name{
+        font-size: 12px;
+    }
+    .image-container .image .learn_more{
+        font-size: 12px;
+    }
+    .image-container .image p{
+        visibility: hidden;
+        display: none; /* Collapse the space */
+        margin: 0; /* Reset margin */
+        padding: 0; /* Reset padding */
+    }
     
     /*contact me*/  
     .testimonials{
