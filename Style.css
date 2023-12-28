@@ -168,6 +168,8 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /*min-height: 100vh;*/
+    animation: fadeInUp;
+    animation-duration: 2s;
 }
 
 .header-content .left-header {
@@ -189,6 +191,16 @@ section {
 .left-header .img{
     animation: fadeInUp;
     animation-duration: 2s;
+}
+
+.boxuser1{
+    display: flex;
+    justify-content: start;
+}
+
+.boxuser1 i{
+    margin-right: 4px;
+
 }
 
 
@@ -626,6 +638,7 @@ section {
 }
 
 
+
 /*P3*/
 .contact-item {
     display: flex;
@@ -808,17 +821,17 @@ section {
 
 .email-check{
     display: none;
-    
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 10px;
+    position: fixed; 
+    top: 0;
     right: 10px;/*-680px;*/
     background-color: var(--color-secondary);
     width: 30%;
     height: 160px;
     border-radius: 7px;
     padding: 2%;
+    line-height: 1.3;
 } 
 
 @keyframes slideright{
@@ -989,9 +1002,7 @@ footer p {
         /*border: solid greenyellow 1px;*/
     }
     
-    .element.style{
-        visibility: visible;
-    }
+    
 
     .right-header .name {
         font-size: 2.5rem !important;
@@ -1097,11 +1108,11 @@ footer p {
     .email-check{
         left: 10px;
         width: 60%;
-        padding: 10px;
+        padding: 30px;
+        height: 190px;
     }
     .email-check i{
-        font-size: 30px;
-        width: 60%;
+        opacity: 0;
     }
 }
 
@@ -1158,7 +1169,6 @@ footer p {
         display: flex;
         width: 12%;
     }
-
 }
 
 /*RWD-loading*/

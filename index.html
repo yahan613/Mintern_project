@@ -39,19 +39,19 @@
                     <img src="img/Frame 1.png" alt="Benjamin" class="img"> <!--added class img??-->
                 </div>
             </div>
-            <div class="wow fadeInUp right-header" data-wow-duration="2s">
-                    <h1 class="name">
-                        <div>Hi, I'm <span>Benjamin Graham.</span></div>
-                        <div>An economist, professor,</div>
-                        <div>and investor.</div>
-                        <div class="typing-animate_2"></div>
-                    </h1>
-                    <p>
-                    <div class="name_des">
-                        <div class="name1">Benjamin Graham taught hundreds of thousands of people how to invest
-                            in the stock market. He’s also my grandfather and he showed me how to invest in happiness.
-                            Beyond Ben Graham takes you beyond the “father of value investing” you already know.</div>
-                    </div>
+            <div class="right-header">
+                <h1 class="name">
+                    <div>Hi, I'm <span>Benjamin Graham.</span></div>
+                    <div>An economist, professor,</div>
+                    <div>and investor.</div>
+                    <div class="typing-animate_2"></div>
+                </h1>
+                <p>
+                <div class="name_des">
+                    <div class="name1">Benjamin Graham taught hundreds of thousands of people how to invest
+                        in the stock market. He’s also my grandfather and he showed me how to invest in happiness.
+                        Beyond Ben Graham takes you beyond the “father of value investing” you already know.</div>
+                </div>
                 </p>
                 <br>
                 <div class="btn-con">
@@ -178,7 +178,7 @@
                         <i id="left" class="fas fa-caret-left"></i>
                     </div>
                     <div class="carousel">
-                        <div class="blog_box" draggable="false" onclick="window.location.href='https://beyondbengraham.com/welcome-to-beyond-ben-graham/'">
+                        <div class="blog_box" draggable="false" onclick="blogview1()">
                             <a href="https://beyondbengraham.com/welcome-to-beyond-ben-graham/">
                                 <img src="img/Blog_0.jpg" alt="Welcome to Beyond Ben Graham">
                             </a>
@@ -192,7 +192,7 @@
                                 <p><i class="fa-regular fa-calendar"></i>&nbsp2013/12/20</p>
                             </div>
                         </div>
-                        <div class="blog_box" draggable="false" onclick="window.location.href='https://beyondbengraham.com/ben-graham-warren-buffett/'">
+                        <div class="blog_box" draggable="false" onclick="blogview2()">
                             <a href="https://beyondbengraham.com/ben-graham-warren-buffett/">
                                 <img src="img/Blog_1.jpg" alt="#2 Ben Graham’s First Worst Memory">
                             </a>
@@ -206,7 +206,7 @@
                                 <p><i class="fa-regular fa-calendar"></i>&nbsp 2012/03/20</p>
                             </div>
                         </div>
-                        <div class="blog_box" draggable="false" onclick="window.location.href='https://beyondbengraham.com/ben-graham-warren-buffett/'">
+                        <div class="blog_box" draggable="false" onclick="blogview3()">
                             <a href="https://beyondbengraham.com/ben-graham-warren-buffett/">
                                 <img src="img/Blog_2.jpg" alt="#3 Ben Graham Saw That He Was Wounded">
                             </a>
@@ -220,7 +220,7 @@
                                 <p><i class="fa-regular fa-calendar"></i>&nbsp2010/07/19</p>
                             </div>
                         </div>
-                        <div class="blog_box" draggable="false" onclick="window.location.href='https://beyondbengraham.com/ben-graham-warren-buffett/'">
+                        <div class="blog_box" draggable="false" onclick="blogview4()">
                             <a href="https://beyondbengraham.com/ben-graham-warren-buffett/">
                                 <img src="img/Blog_3.jpg" alt="#4 With a Little Help from Ben">
                             </a>
@@ -234,7 +234,7 @@
                                 <p><i class="fa-regular fa-calendar"></i>&nbsp2002/03/20</p>
                             </div>
                         </div>
-                        <div class="blog_box" draggable="false" onclick="window.location.href='https://beyondbengraham.com/ben-graham-warren-buffett/'">
+                        <div class="blog_box" draggable="false" onclick="blogview5()">
                             <a href="https://beyondbengraham.com/ben-graham-warren-buffett/">
                                 <img src="img/Blog_4.jpg" alt="#5 With Warren Buffett">
                             </a>
@@ -349,8 +349,8 @@
                                     <h3 id="Submit">Submit</h3>
                                 </div>
                                 <div class="email-check" id="emailCheckElement">
-                                    <i class="fas fa-envelope"></i>
-                                    <h3>Thank you! <br>I have received your message and will respond promptly via email.</h3>
+                                    <h3>Thank you! <br>I have received your message and will respond promptly via email.
+                                    </h3>
                                 </div>
                             </form>
                         </div>
@@ -359,18 +359,22 @@
                         <div class="testimonials">
                             <div class="box" id="box1">
                                 <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star" id="s1"></i>
+                                    <i class="fas fa-star" id="s2"></i>
+                                    <i class="fas fa-star" id="s3"></i>
+                                    <i class="fas fa-star" id="s4"></i>
+                                    <i class="fas fa-star" id="s5"></i>
                                 </div>
-                                <p class="review">
+                                <div class="review" id="box1review">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore.
-                                </p>
-                                <i class="fas fa-user-circle"></i>
-                                John Doe
+                                </div>
+                                <div class="boxuser1">
+                                    <i class="fas fa-user-circle"></i>
+                                    <div class=box1n id="box1nid">
+                                        John Doe
+                                    </div>
+                                </div>
                             </div>
                             <div class="box" id="box2">
                                 <div class="stars">
@@ -384,8 +388,10 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore.
                                 </p>
-                                <i class="fas fa-user-circle"></i>
-                                Jane Doe
+                                <div class=box2n id="box2nid">
+                                    <i class="fas fa-user-circle"></i>
+                                    NANCY
+                                </div>
                             </div>
                             <div class="box" id="box3">
                                 <div class="stars">
@@ -399,8 +405,10 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore.
                                 </p>
-                                <i class="fas fa-user-circle"></i>
-                                Woorren Boofett
+                                <div class=box3n id="box3nid">
+                                    <i class="fas fa-user-circle"></i>
+                                    John Doe
+                                </div>
                             </div>
                         </div>
                         <div class="hidden-testimonials">
@@ -459,15 +467,15 @@
                             <form action="" class="contact-form2">
                                 <p>YOUR RATING : </p>
                                 <div class="rate">
-                                    <input type="radio" id="star5" name="rate" value="5" />
+                                    <input type="radio" id="star5" name="rate" value="5" onclick="rateClicked(5)"/>
                                     <label for="star5" title="text"></label>
-                                    <input type="radio" id="star4" name="rate" value="4" />
+                                    <input type="radio" id="star4" name="rate" value="4" onclick="rateClicked(4)"/>
                                     <label for="star4" title="text"></label>
-                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <input type="radio" id="star3" name="rate" value="3" onclick="rateClicked(3)"/>
                                     <label for="star3" title="text"></label>
-                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <input type="radio" id="star2" name="rate" value="2" onclick="rateClicked(2)"/>
                                     <label for="star2" title="text"></label>
-                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <input type="radio" id="star1" name="rate" value="1" onclick="rateClicked(1)"/>
                                     <label for="star1" title="text"></label>
                                 </div>
                                 <div class="input-control2">
@@ -478,7 +486,7 @@
                                         placeholder="ENTER TESTIMONIAL..."></textarea>
                                 </div>
                                 <br>
-                                <div class="learn_more" id="Submitbtn2">
+                                <div class="learn_more" id="Submitbtn2" onclick="testiS()">
                                     <h3 id="Submit2">Submit</h3>
                                 </div>
                             </form>

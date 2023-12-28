@@ -117,10 +117,10 @@ async function initializeFirestore() {
     try {
         // Add document to "mail" collection
         const docmail = await addDoc(collection(db, "mail"), {
-            to: ContactData.getEmail,
+            to: "yahan930718@gmail.com",
             message: {
                 subject: "Contact Message Notify",
-                text: ("Here is " + ContactData.getName + " Contact at " + currentDate + ".\nTel: " + ContactData.getTel + "\nSubject: " + ContactData.getSubject + "\nMessage: " + ContactData.getMessage + "\nPlease reply the message.")
+                text: ("Here is " + ContactData.getName + " Contact at " + currentDate + ".\nTel: " + ContactData.getTel + "\nE-mail:" + ContactData.getEmail +"\nSubject: " + ContactData.getSubject + "\nMessage: " + ContactData.getMessage + "\nPlease reply the message.")
             }
         });
         console.log("Document written with ID: ", docmail.id);

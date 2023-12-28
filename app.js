@@ -231,6 +231,113 @@ function n1animation(){
     console.log("n1");
 }
 */
+console.log("KK");
+let testimonial = {
+    getStar: '',
+    getName: '',
+    getText: '',
+};
+
+
+let testimonial1 = {
+    getStar: '',
+    getName: '',
+    getText: '',
+};
+
+let testimonial2 = {
+    getStar: '',
+    getName: '',
+    getText: '',
+};
+
+let testimonial3 = {
+    getStar: '',
+    getName: '',
+    getText: '',
+};
+
+let testimonial4 = {
+    getStar: '',
+    getName: '',
+    getText: '',
+};
+
+let testimonial5 = {
+    getStar: '',
+    getName: '',
+    getText: '',
+};
+
+let testimonial6 = {
+    getStar: '',
+    getName: '',
+    getText: '',
+};
+
+let starc=0;
+
+function testiS() {
+    console.log("GGG");
+    var submitHeading = document.getElementById('Submit2');
+    submitHeading.innerText = 'Submitted';
+    testimonial.getName = document.getElementById('nameInput2').value;
+    testimonial.getText = document.getElementById('mesInput2').value;
+    console.log(testimonial.getName);
+    console.log(testimonial.getText);
+    setTimeout(function () {
+        var box1Element = document.getElementById('box1nid');
+        box1Element.innerHTML = testimonial.getName;
+        var box1review = document.getElementById('box1review');
+        box1review.innerHTML = testimonial.getText;
+        if(starc<5){
+            var myElement = document.getElementById("s5");
+            myElement.style.opacity = 0;
+            if(starc<4) {
+                var myElement2 = document.getElementById("s4");
+                myElement2.style.opacity = 0;  
+                if(starc<3) {
+                    var myElement3 = document.getElementById("s3");
+                    myElement3.style.opacity = 0;
+                }   
+                if(starc<2) {
+                    var myElement3 = document.getElementById("s2");
+                    myElement3.style.opacity = 0;
+                }
+            }
+        }
+        document.getElementById('nameInput2').value = '';
+        document.getElementById('mesInput2').value = '';
+        console.log("FFFTF");
+        /*這裡要寫function star(i)*/
+    }, 400); // 延迟时间为0.5秒（500毫秒）
+}
+
+function rateClicked(value) {
+    console.log('Star ' + value + ' clicked');
+    starc = value;
+    console.log("Count:" + starc);
+    // 在这里执行其他操作，根据需要处理被点击的星级
+}
+
+function star(starc) {
+    if(i<5){
+        var myElement = document.getElementById("s5");
+        myElement.style.opacity = 0;
+        if(i<4) {
+            var myElement2 = document.getElementById("s4");
+            myElement2.style.opacity = 0;  
+            if(i<3) {
+                var myElement3 = document.getElementById("s3");
+                myElement3.style.opacity = 0;
+            }   
+            if(i<2) {
+                var myElement3 = document.getElementById("s2");
+                myElement3.style.opacity = 0;
+            }
+        }
+    }
+}
 
 
 
