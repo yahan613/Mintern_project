@@ -219,7 +219,7 @@ let ContactData = {
 
 
 //name1
-const n1 = document.querySelector('.name1');
+/*const n1 = document.querySelector('.name1');
 window.addEventListener('scroll', n1animation);
 function n1animation(){
     var rect = n1.getBoundingClientRect();
@@ -230,7 +230,7 @@ function n1animation(){
     }
     console.log("n1");
 }
-
+*/
 
 
 

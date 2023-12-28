@@ -214,6 +214,7 @@ section {
     justify-content: start;
     padding-right: 30%;
     padding-top: 20%;
+    /*border: solid greenyellow 1px;*/
     /*animation: fadeInUp;
     animation-duration: 2s;*/
 }
@@ -928,7 +929,9 @@ footer p {
         padding-right: 0rem !important;
         width: 90%;
         margin: 0 auto;
+        /*margin-top: 200px;*/
         padding-top: 0; 
+        /*border: solid greenyellow 1px;*/
     }
 
     .right-header .name {
