@@ -83,15 +83,25 @@ console.log(db);
 }*/
 // Firestoreinit.js
 async function initializeFirestore() {
+    // Get references to elements
+    var emailCheckElement = document.getElementById('emailCheckElement');
     var submitHeading = document.getElementById('Submit');
+
+    // Hide the emailCheckElement initially
+    emailCheckElement.style.display = 'none';
+
+    // Update the Submit heading
     submitHeading.innerText = 'Submitted';
+
+    // Gather form data
     ContactData.getName = document.getElementById('nameInput').value;
     ContactData.getEmail = document.getElementById('emailInput').value;
     ContactData.getTel = document.getElementById('telInput').value;
     ContactData.getSubject = document.getElementById('subjectInput').value;
     ContactData.getMessage = document.getElementById('mesInput').value;
+
     try {
-        console.log("後內容：", ContactData);
+        // Add document to "Contacts" collection
         const docRef = await addDoc(collection(db, "Contacts"), {
             Name: ContactData.getName,
             Email: ContactData.getEmail,
@@ -103,12 +113,14 @@ async function initializeFirestore() {
     } catch (e) {
         console.error("Error adding client's commit document: ", e);
     }
+
     try {
+        // Add document to "mail" collection
         const docmail = await addDoc(collection(db, "mail"), {
             to: ContactData.getEmail,
             message: {
                 subject: "Contact Message Notify",
-                text: ("Here is " + ContactData.getName + " Contact at "+ currentDate +".\nTel: "+ ContactData.getTel + "\nSubject: "+ ContactData.getSubject + "\nMessage: "+ ContactData.getMessage + "\nPlease reply the message.")
+                text: ("Here is " + ContactData.getName + " Contact at " + currentDate + ".\nTel: " + ContactData.getTel + "\nSubject: " + ContactData.getSubject + "\nMessage: " + ContactData.getMessage + "\nPlease reply the message.")
             }
         });
         console.log("Document written with ID: ", docmail.id);
@@ -116,6 +128,13 @@ async function initializeFirestore() {
         console.error("Error adding client's commit document: ", e);
     }
 
+    // Show the emailCheckElement
+    emailCheckElement.style.display = 'block';
+
+    // Trigger the fadeInDown animation
+    emailCheckElement.classList.add('animate__animated', 'animate__fadeInDown');
+
+    // Clear form fields after a delay
     setTimeout(function () {
         document.getElementById('nameInput').value = '';
         document.getElementById('emailInput').value = '';
@@ -123,10 +142,9 @@ async function initializeFirestore() {
         document.getElementById('subjectInput').value = '';
         document.getElementById('mesInput').value = '';
         console.log("SU");
-    }, 1000); // 延迟时间为0.5秒（500毫秒）
-    var emailCheckElement = document.getElementById('emailCheckElement');
-    emailCheckElement.classList.add('slide-animation');
+    }, 1000); // Delay of 1 second
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     window.changeSubmit = initializeFirestore;

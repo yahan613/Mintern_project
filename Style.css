@@ -744,7 +744,6 @@ section {
 
 .country-btn-content a:hover {
     background-color: var(--color-grey-6-1);
-    /* 在此替换为您希望的较深颜色 */
 }
 
 
@@ -753,21 +752,76 @@ section {
     justify-content: flex-start;
 }
 
-.email-check {
+.testimonials-form{
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.8rem 1.1rem;
+    outline: none;
+    border: none;
+    background-color: var(--color-grey-5);
+}
+.testimonials-form input, .testimonials-form textarea{
+    width: 100%;
+    border-radius: 5px;
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.8rem 1.1rem;
+    margin-bottom: 3px;
+    outline: none;
+    border: 1px solid #6c7983;
+    background-color: var(--color-grey-5);
+    color: var(--color-white);
+}
+
+.rate {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+    padding: 5% 15%;
+    margin-bottom: 5px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    visibility:hidden;
+}
+.rate:not(:checked) > label {
+    float:right;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:35px;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #64CCC5;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #64CCC5;  
+}
+
+.email-check{
+    display: none;
+    
     justify-content: center;
     align-items: center;
     position: fixed;
     top: 10px;
     right: 10px;/*-680px;*/
     background-color: var(--color-secondary);
-    width: 40%;
-    height: 150px;
+    width: 30%;
+    height: 160px;
     border-radius: 7px;
-    animation: slideRight 0.5s ease-in-out;
-}
+    padding: 2%;
+} 
 
-@keyframes slideRight {
+@keyframes slideright{
     from {
         transform: translateX(0);
     }
@@ -776,17 +830,18 @@ section {
     }
 }
 
-.email-check h3 {
+/* .email-check h3 {
     border: none;
+    padding: 5%;
 }
 
 .email-check i {
     width: 30%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 3.4vw;
-}
+    margin-top: 3%;
+    font-size: 3vw;
+} */
 
 
 .right-contact {
@@ -932,6 +987,10 @@ footer p {
         /*margin-top: 200px;*/
         padding-top: 0; 
         /*border: solid greenyellow 1px;*/
+    }
+    
+    .element.style{
+        visibility: visible;
     }
 
     .right-header .name {
